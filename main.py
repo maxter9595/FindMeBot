@@ -384,7 +384,7 @@ if __name__ == '__main__':
                     text = event.text.lower()
                     payload = event.extra_values.get('payload')
 
-                    if text == 'start':
+                    if text.lower() == 'start' or text.lower() == 'начать':
                         handle_start(event.user_id)
 
                     elif text == 'хочу зарегистрироваться':
