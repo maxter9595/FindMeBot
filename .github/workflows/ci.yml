@@ -86,7 +86,7 @@ jobs:
         run: |
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
             set -e
-            cd ~/findme-vk-bot || exit
+            cd ~/FindMeBot || exit
 
             git fetch origin
             git reset --hard origin/main
