@@ -91,17 +91,6 @@ jobs:
             git fetch origin
             git reset --hard origin/main
 
-            cat > .env << EOF
-            DB_NAME=findme_db
-            USER_NAME_DB=postgres
-            USER_PASSWORD_DB=postgres
-            DB_HOST=db
-            DB_PORT=5432
-            VK_GROUP_TOKEN=$VK_GROUP_TOKEN
-            VK_USER_TOKEN=$VK_USER_TOKEN
-            API_LONG_POLL_VERSION=5.199
-            EOF
-
             docker compose up -d --build db pgadmin app
             echo 'VK FindMe Bot deployment completed successfully!'
           "
