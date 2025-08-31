@@ -1,0 +1,12 @@
+__pycache__
+.pytest_cache
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.local
+.env.production
+.git
+.github
+README.md
+LICENSE.txt
