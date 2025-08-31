@@ -79,18 +79,49 @@ jobs:
       - name: Test SSH connection
         run: timeout 60s ssh -o ConnectTimeout=30 -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} echo "SSH OK"
 
-      - name: Deploy to server
+      - name: Prepare deployment files
         env:
           VK_GROUP_TOKEN: ${{ secrets.VK_GROUP_TOKEN }}
           VK_USER_TOKEN: ${{ secrets.VK_USER_TOKEN }}
         run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "
+          cat > .env.production << EOF
+                DB_NAME=findme_db
+                USER_NAME_DB=postgres
+                USER_PASSWORD_DB=postgres
+                DB_HOST=db
+                DB_PORT=5432
+                VK_GROUP_TOKEN=$VK_GROUP_TOKEN
+                VK_USER_TOKEN=$VK_USER_TOKEN
+                API_LONG_POLL_VERSION=5.199
+                PGADMIN_EMAIL=admin@findme.com
+                PGADMIN_PASSWORD=Admin123!
+                PGADMIN_PORT=5050
+                EOF
+
+      - name: Deploy to server
+        env:
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+        run: |
+          scp .env.production $SSH_USER@$SSH_HOST:~/FindMeBot/.env
+          scp docker-compose.yml $SSH_USER@$SSH_HOST:~/FindMeBot/
+          scp Dockerfile $SSH_USER@$SSH_HOST:~/FindMeBot/
+
+          ssh $SSH_USER@$SSH_HOST "
             set -e
-            cd ~/FindMeBot || exit
-
-            git fetch origin
-            git reset --hard origin/main
-
-            docker compose up -d --build db pgadmin app
+            cd ~/FindMeBot
+            
+            # Останавливаем старые контейнеры
+            docker compose down --remove-orphans || true
+            
+            # Очищаем мешающие файлы
+            rm -rf .pytest_cache __pycache__ *.pyc || true
+            
+            # Запускаем с чистым контекстом
+            DOCKER_BUILDKIT=1 docker compose build --no-cache
+            docker compose up -d
+            
             echo 'VK FindMe Bot deployment completed successfully!'
           "
+
+          rm -f .env.production
