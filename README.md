@@ -1,6 +1,6 @@
 # ❤️ FindMeBot - чат-бот VK для поиска второй половинки
 
-<img src="./demo/1-Intro/1.gif" width="100%">
+<img src="./Demo/1-Intro/1.gif" width="100%">
 
 ## 1. Лимиты внешних API и прочие ограничения
 
@@ -24,7 +24,7 @@
 
 После успешного завершения регистрации приложение откроет главное меню
 
-<img src="./demo/2-Functionality/1.gif" width="100%">
+<img src="./Demo/2-Functionality/1.gif" width="100%">
 
 ### 2.2. Поиск партнера
 
@@ -33,7 +33,7 @@
   - Для перехода к следующей анкете используйте кнопку ```Вперед```
   - Чтобы вернуться к предыдущей анкете, нажмите кнопку ```Назад```
 
-<img src="./demo/2-Functionality/2-1.gif" width="100%">
+<img src="./Demo/2-Functionality/2-1.gif" width="100%">
 
 - С каждой анкетой можно выполнить следующие действия:
   - Добавить кандидата в избранное, нажав кнопку ```Добавить в избранное```
@@ -41,7 +41,7 @@
 
 В любой момент можно вернуться в главное меню, нажав кнопку ```Главное меню```
 
-<img src="./demo/2-Functionality/2-2.gif" width="100%">
+<img src="./Demo/2-Functionality/2-2.gif" width="100%">
 
 ### 2.3. Настройка критериев поиска
 
@@ -51,7 +51,7 @@
 
 Обновленные критерии будут сразу же применены при последующем поиске.
 
-<img src="./demo/2-Functionality/3.gif" width="100%">
+<img src="./Demo/2-Functionality/3.gif" width="100%">
 
 ### 2.4. Избранные
 
@@ -59,7 +59,7 @@
   - Для просмотра списка нажмите кнопку ```Избранные``` в главном меню
   - При желании пользователя можно убрать из списка избранных кандидатов
 
-<img src="./demo/2-Functionality/4.gif" width="100%">
+<img src="./Demo/2-Functionality/4.gif" width="100%">
 
 ### 2.5. Черный список
 
@@ -67,7 +67,7 @@
   - Для просмотра списка нажмите кнопку ```Черный список``` в главном меню.
   - При желании пользователя можно убрать из черного списка.
 
-<img src="./demo/2-Functionality/5.gif" width="100%">
+<img src="./Demo/2-Functionality/5.gif" width="100%">
 
 ## 3. Инструкция по получению токенов ВК
 
@@ -86,15 +86,15 @@
 Тематика: Общество
 ```
 
-<img src="./demo/3-Tokens/1.png" width="100%">
+<img src="./Demo/3-Tokens/1.png" width="100%">
 
 #### 3.1.2. Включение возможностей бота
 
 - Созданное сообщество ВК → Раздел ```Управление``` → Подраздел ```Сообщения``` → ```Настройки для бота```. Включаем возможности бота и сохраняем изменения.
 
-<img src="./demo/3-Tokens/2-1.png" width="100%">
+<img src="./Demo/3-Tokens/2-1.png" width="100%">
 
-<img src="./demo/3-Tokens/2-2.png" width="100%">
+<img src="./Demo/3-Tokens/2-2.png" width="100%">
 
 #### 3.1.3. Включение настроек для чат-бота ВК
 
@@ -106,19 +106,19 @@
 vk1.a.i-xX...xg
 ```
 
-<img src="./demo/3-Tokens/3-1.png" width="100%">
+<img src="./Demo/3-Tokens/3-1.png" width="100%">
 
-<img src="./demo/3-Tokens/3-2.png" width="100%">
+<img src="./Demo/3-Tokens/3-2.png" width="100%">
 
 #### 3.1.4. Настройка Long Poll API
 
 - Созданное сообщество ВК → Раздел ```Управление``` → Подраздел ```Дополнительно``` → ```Работа с API``` → Вкладка ```Long Poll API```. Включаем Long Poll API, ставим версию 5.131 и устанавливаем типы сообщений для Long Poll API.
 
-<img src="./demo/3-Tokens/4-1.png" width="100%">
+<img src="./Demo/3-Tokens/4-1.png" width="100%">
 
-<img src="./demo/3-Tokens/4-2.png" width="100%">
+<img src="./Demo/3-Tokens/4-2.png" width="100%">
 
-<img src="./demo/3-Tokens/4-3.png" width="100%">
+<img src="./Demo/3-Tokens/4-3.png" width="100%">
 
 - Версия Long Poll API задается в переменной окружения ```API_LONG_POLL_VERSION```
 
@@ -134,9 +134,9 @@ API_LONG_POLL_VERSION = 5.131
 - Сайт [https://vkhost.github.io/](https://vkhost.github.io/) → Приложение ```VK Admin```. После выбора приложения соглашаемся со всеми разрешениями (кнопка ```Разрешить```)
 - При желании вместо ```VK Admin``` можно использовать собственное приложение для получения токена: [https://id.vk.com/about/business/go/docs/ru/vkid/latest/vk-id/connection/tokens/access-token](https://id.vk.com/about/business/go/docs/ru/vkid/latest/vk-id/connection/tokens/access-token)
 
-<img src="./demo/3-Tokens/5-1.png" width="100%">
+<img src="./Demo/3-Tokens/5-1.png" width="100%">
 
-<img src="./demo/3-Tokens/5-2.png" width="100%">
+<img src="./Demo/3-Tokens/5-2.png" width="100%">
 
 #### 3.2.2. Копируем токен пользователя ВК
 
@@ -148,7 +148,7 @@ API_LONG_POLL_VERSION = 5.131
 vk1.a.kr...dQ
 ```
 
-<img src="./demo/3-Tokens/5-3.png" width="100%">
+<img src="./Demo/3-Tokens/5-3.png" width="100%">
 
 ## 4. Инструкция по локальному запуску проекта
 
@@ -161,7 +161,7 @@ git clone https://github.com/maxter9595/FindMeBot.git
 cd FindMeBot
 ```
 
-<img src="./demo/4-Local-Setup/1.gif" width="100%">
+<img src="./Demo/4-Local-Setup/1.gif" width="100%">
 
 ### 4.2. Настройка переменных окружения
 
@@ -171,7 +171,7 @@ cd FindMeBot
 bash -c "cp .env_example .env"
 ```
 
-<img src="./demo/4-Local-Setup/2-1.gif" width="100%">
+<img src="./Demo/4-Local-Setup/2-1.gif" width="100%">
 
 * Задание токена для переменной окружения ```VK_GROUP_TOKEN```:
 
@@ -180,7 +180,7 @@ bash -c "cp .env_example .env"
 bash -c "sed -i 's/VK_GROUP_TOKEN=your_group_token/VK_GROUP_TOKEN=vk1.a.i-xX...xg/' .env"
 ```
 
-<img src="./demo/4-Local-Setup/2-2.png" width="100%">
+<img src="./Demo/4-Local-Setup/2-2.png" width="100%">
 
 * Задание токена для переменной окружения ```VK_USER_TOKEN```:
 
@@ -189,7 +189,7 @@ bash -c "sed -i 's/VK_GROUP_TOKEN=your_group_token/VK_GROUP_TOKEN=vk1.a.i-xX...x
 bash -c "sed -i 's/VK_USER_TOKEN=your_user_token/VK_USER_TOKEN=vk1.a.kr...dQ/' .env"
 ```
 
-<img src="./demo/4-Local-Setup/2-3.png" width="100%">
+<img src="./Demo/4-Local-Setup/2-3.png" width="100%">
 
 ### 4.3. Запуск Docker
 
@@ -202,7 +202,7 @@ docker compose build
 docker compose up -d
 ```
 
-<img src="./demo/4-Local-Setup/3.gif" width="100%">
+<img src="./Demo/4-Local-Setup/3.gif" width="100%">
 
 ### 4.4. Тестирование приложения
 
@@ -213,7 +213,7 @@ docker-compose ps
 docker-compose run test
 ```
 
-<img src="./demo/4-Local-Setup/4.gif" width="100%">
+<img src="./Demo/4-Local-Setup/4.gif" width="100%">
 
 ### 4.5. Подключение к административной панели СУБД PostgreSQL
 
@@ -236,13 +236,13 @@ Username: postgres
 Password: postgres
 ```
 
-<img src="./demo/4-Local-Setup/5.gif" width="100%">
+<img src="./Demo/4-Local-Setup/5.gif" width="100%">
 
 ### 4.6. Проверка работы приложения
 
 * Главная страница сообщества ➝ ```Сообщение``` ➝ ```Перейти к диалогу с сообществом```. Разрешаем отправку сообщений (если потребуется) и проверяем работу бота, нажав на кнопку ```Начать```
 
-<img src="./demo/4-Local-Setup/6.gif" width="100%">
+<img src="./Demo/4-Local-Setup/6.gif" width="100%">
 
 ## 5. Инструкция по деплою проекта на сервере
 
@@ -269,7 +269,7 @@ Password: postgres
 ssh root@95.163.223.69
 ```
 
-<img src="./demo/5-Server-Deploy/1.gif" width="100%">
+<img src="./Demo/5-Server-Deploy/1.gif" width="100%">
 
 ### 5.2. Подготовка сервера для деплоя
 
@@ -303,7 +303,7 @@ systemctl enable docker && systemctl start docker && usermod -aG docker myappuse
 ssh myappuser@95.163.223.69
 ```
 
-<img src="./demo/5-Server-Deploy/2.gif" width="100%">
+<img src="./Demo/5-Server-Deploy/2.gif" width="100%">
 
 ### 5.3. Клонирование репозитория. Подготовка переменных окружения
 
@@ -319,7 +319,7 @@ git clone https://github.com/maxter9595/FindMeBot.git && cd FindMeBot
 cp .env_example .env
 ```
 
-<img src="./demo/5-Server-Deploy/3-1.gif" width="100%">
+<img src="./Demo/5-Server-Deploy/3-1.gif" width="100%">
 
 * Задание токена для переменной окружения ```VK_GROUP_TOKEN```:
 
@@ -328,7 +328,7 @@ cp .env_example .env
 sed -i 's/VK_GROUP_TOKEN=your_group_token/VK_GROUP_TOKEN=vk1.a.i-xX...xg/' .env
 ```
 
-<img src="./demo/5-Server-Deploy/3-2.png" width="100%">
+<img src="./Demo/5-Server-Deploy/3-2.png" width="100%">
 
 * Задание токена для переменной окружения ```VK_GROUP_TOKEN```:
 
@@ -337,7 +337,7 @@ sed -i 's/VK_GROUP_TOKEN=your_group_token/VK_GROUP_TOKEN=vk1.a.i-xX...xg/' .env
 sed -i 's/VK_USER_TOKEN=your_user_token/VK_USER_TOKEN=vk1.a.kr...dQ/' .env
 ```
 
-<img src="./demo/5-Server-Deploy/3-3.png" width="100%">
+<img src="./Demo/5-Server-Deploy/3-3.png" width="100%">
 
 ### 5.4. Запуск Docker и тестирование функционала
 
@@ -347,7 +347,7 @@ sed -i 's/VK_USER_TOKEN=your_user_token/VK_USER_TOKEN=vk1.a.kr...dQ/' .env
 docker compose build && docker compose up -d && docker compose run test
 ```
 
-<img src="./demo/5-Server-Deploy/4.gif" width="100%">
+<img src="./Demo/5-Server-Deploy/4.gif" width="100%">
 
 ### 5.5. Настройка админской панели СУБД PostgreSQL
 
@@ -370,13 +370,13 @@ Username: postgres
 Password: postgres
 ```
 
-<img src="./demo/5-Server-Deploy/5.gif" width="100%">
+<img src="./Demo/5-Server-Deploy/5.gif" width="100%">
 
 ### 5.6. Проверка работы приложения
 
 * Главная страница сообщества ➝ ```Сообщение``` ➝ ```Перейти к диалогу с сообществом```. Разрешаем отправку сообщений (если потребуется) и проверяем работу бота, нажав на кнопку ```Начать```
 
-<img src="./demo/5-Server-Deploy/6.gif" width="100%">
+<img src="./Demo/5-Server-Deploy/6.gif" width="100%">
 
 ## 6. Настройка автодеплоя проекта (CI/CD)
 
@@ -399,7 +399,7 @@ type $env:USERPROFILE\.ssh\id_ed25519.pub
 ssh-ed25519 AAAA...Sk max.t95@bk.ru
 ```
 
-<img src="./demo/6-CI-CD/1.png" width="100%">
+<img src="./Demo/6-CI-CD/1.png" width="100%">
 
 ### 6.2. Генерация SSH-ключа на сервере
 
@@ -426,7 +426,7 @@ ssh-keygen -y -f ~/.ssh/id_ed25519
 ssh-ed25519 AAAA...TT max.t95@bk.ru
 ```
 
-<img src="./demo/6-CI-CD/2.png" width="100%">
+<img src="./Demo/6-CI-CD/2.png" width="100%">
 
 ### 6.3. Добавление SSH-ключей из локального ПК и сервера в список авторизованных ключей сервера
 
@@ -454,7 +454,7 @@ ssh-ed25519 AAAA...TT max.t95@bk.ru
 ssh-ed25519 AAAA...Sk max.t95@bk.ru
 ```
 
-<img src="./demo/6-CI-CD/3.png" width="100%">
+<img src="./Demo/6-CI-CD/3.png" width="100%">
 
 ### 6.4. Настройка sudo без пароля для CI/CD
 
@@ -484,7 +484,7 @@ ssh myappuser@95.163.223.69
 # Если всё ок — войдём без пароля
 ```
 
-<img src="./demo/6-CI-CD/4.gif" width="100%">
+<img src="./Demo/6-CI-CD/4.gif" width="100%">
 
 ### 6.5. Привязка SSH-ключа к GitHub
 
@@ -511,7 +511,7 @@ ssh-ed25519 AAAA...TT max.t95@bk.ru
 
   * После добавления параметров SSH-ключа нажимаем ```Add SSH key```
 
-<img src="./demo/6-CI-CD/5.png" width="100%">
+<img src="./Demo/6-CI-CD/5.png" width="100%">
 
 ### 6.6.Настройка файла SSH-конфигурации. Проверка подключения к GitHub
 
@@ -550,7 +550,7 @@ ssh -T git@github.com
 # Hi <логин>! You've successfully authenticated ...
 ```
 
-<img src="./demo/6-CI-CD/6.gif" width="100%">
+<img src="./Demo/6-CI-CD/6.gif" width="100%">
 
 ### 6.7. Установка значений secret-параметров GitHub-репозитория для автодеплоя
 
@@ -579,8 +579,8 @@ b3...=
 
   * VK_USER_TOKEN: токен пользователя ВК
 
-<img src="./demo/6-CI-CD/7-1.png" width="100%">
+<img src="./Demo/6-CI-CD/7-1.png" width="100%">
 
 * После установки secrets проверяем функционал автодеплоя
 
-<img src="./demo/6-CI-CD/7-2.gif" width="100%">
+<img src="./Demo/6-CI-CD/7-2.gif" width="100%">
