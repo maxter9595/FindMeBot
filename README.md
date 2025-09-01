@@ -285,6 +285,7 @@ systemctl enable docker && systemctl start docker && usermod -aG docker myappuse
 ```
 
 ```bash
+# Вход по паролю, заданному пользователю через adduser myappuser
 ssh myappuser@95.163.223.69
 ```
 
@@ -381,7 +382,7 @@ type $env:USERPROFILE\.ssh\id_ed25519.pub
 
 ```bash
 # Копируем SSH-ключ
-ssh-ed25519 AAAA...g5 max.t95@bk.ru
+ssh-ed25519 AAAA...Sk max.t95@bk.ru
 ```
 
 <img src="./demo/5-ci-cd/1.png" width="100%">
@@ -391,7 +392,7 @@ ssh-ed25519 AAAA...g5 max.t95@bk.ru
 * Вход на сервер:
 
 ```bash
-ssh myclouduser@95.163.223.69
+ssh myappuser@95.163.223.69
 ```
 
 * Генерация SSH-ключа на сервере:
@@ -408,7 +409,7 @@ ssh-keygen -y -f ~/.ssh/id_ed25519
 
 ```bash
 # SSH-ключ из сервера понадобится для удаленного подключения к GitHub
-ssh-ed25519 AAAA...hc max.t95@bk.ru
+ssh-ed25519 AAAA...TT max.t95@bk.ru
 ```
 
 <img src="./demo/5-ci-cd/2.png" width="100%">
@@ -424,7 +425,7 @@ ssh-keygen -y -f ~/.ssh/id_ed25519 >> ~/.ssh/authorized_keys
 * Ввод SSH-ключа из локального ПК в список авторизированных ключей:
 
 ```bash
-echo "ssh-ed25519 AAAA...g5 max.t95@bk.ru" >> ~/.ssh/authorized_keys
+echo "ssh-ed25519 AAAA...Sk max.t95@bk.ru" >> ~/.ssh/authorized_keys
 ```
 
 * Просмотр списка авторизированных ключей:
@@ -435,8 +436,8 @@ cat ~/.ssh/authorized_keys
 
 ```bash
 # В результате должно быть два SSH-ключа в списке авторизованных ключей
-ssh-ed25519 AAAA...hc max.t95@bk.ru
-ssh-ed25519 AAAA...g5 max.t95@bk.ru
+ssh-ed25519 AAAA...TT max.t95@bk.ru
+ssh-ed25519 AAAA...Sk max.t95@bk.ru
 ```
 
 <img src="./demo/5-ci-cd/3.png" width="100%">
@@ -458,14 +459,14 @@ sudo visudo
 
 ```bash
 # Добавляем в конце файла следующее:
-myclouduser ALL=(ALL) NOPASSWD: ALL
+myappuser ALL=(ALL) NOPASSWD: ALL
 ```
 
 * Выход из сервера и проверка входа на сервер без пароля:
 
 ```bash
 exit
-ssh myclouduser@95.163.223.69
+ssh myappuser@95.163.223.69
 # Если всё ок — войдём без пароля
 ```
 
@@ -481,7 +482,7 @@ cat ~/.ssh/id_ed25519.pub
 
 ```bash
 # Копируем все, что будет выведено
-ssh-ed25519 AAAA...hc max.t95@bk.ru
+ssh-ed25519 AAAA...TT max.t95@bk.ru
 ```
 
 * Привязка публичного ключа к GitHub:
@@ -492,7 +493,7 @@ ssh-ed25519 AAAA...hc max.t95@bk.ru
   
      * Имя ключа: ```VM-server```
 
-     * В поле ```Key``` добавляем содержимое SSH-ключа. Пример - ```ssh-ed25519 AAAA...hc max.t95@bk.ru```
+     * В поле ```Key``` добавляем содержимое SSH-ключа. Пример - ```ssh-ed25519 AAAA...TT max.t95@bk.ru```
 
   * После добавления параметров SSH-ключа нажимаем ```Add SSH key```
 
