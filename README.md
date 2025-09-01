@@ -239,7 +239,7 @@ Password: postgres
 * Пример IP-адреса и информация о сервере для покупки:
 
 ```
-- IP-адрес: 95.163.228.93
+- IP-адрес: 95.163.223.69
 - Предустановленный Docker: да 
 - Образ: Ubuntu
 - Тарифы и конфигурации: производительный
@@ -252,7 +252,7 @@ Password: postgres
 * Вход на сервер после его приобретения:
 
 ```bash
-ssh root@95.163.228.93
+ssh root@95.163.223.69
 ```
 
 <img src="./demo/4-server-deploy/1.gif" width="100%">
@@ -262,7 +262,7 @@ ssh root@95.163.228.93
 * Создание пользователя и добавление его в группу sudo:
 
 ```bash
-adduser myuser && usermod -aG sudo myuser
+adduser myappuser && usermod -aG sudo myappuser
 ```
 
 * Установка зависимостей:
@@ -281,11 +281,11 @@ sudo ufw allow 5432 && sudo ufw allow 5050 && sudo ufw allow 22 && ufw allow 80 
 
 ```bash
 # На выбранном сервере Docker уже предустановлен
-systemctl enable docker && systemctl start docker && usermod -aG docker myuser && exit
+systemctl enable docker && systemctl start docker && usermod -aG docker myappuser && exit
 ```
 
 ```bash
-ssh myuser@95.163.228.93
+ssh myappuser@95.163.223.69
 ```
 
 <img src="./demo/4-server-deploy/2.gif" width="100%">
@@ -336,7 +336,7 @@ docker compose build && docker compose up -d && docker compose run test
 
 ### 5.5. Настройка админской панели СУБД PostgreSQL
 
-* Админка PostgreSQL (через PGAdmin): [http://95.163.228.93:5050/](http://95.163.228.93:5050/)
+* Админка PostgreSQL (через PGAdmin): [http://95.163.223.69:5050/](http://95.163.223.69:5050/)
 
 * Данные администратора БД для входа в административную панель СУБД PostgreSQL:
 
@@ -391,7 +391,7 @@ ssh-ed25519 AAAA...g5 max.t95@bk.ru
 * Вход на сервер:
 
 ```bash
-ssh myclouduser@95.163.228.93
+ssh myclouduser@95.163.223.69
 ```
 
 * Генерация SSH-ключа на сервере:
@@ -465,7 +465,7 @@ myclouduser ALL=(ALL) NOPASSWD: ALL
 
 ```bash
 exit
-ssh myclouduser@95.163.228.93
+ssh myclouduser@95.163.223.69
 # Если всё ок — войдём без пароля
 ```
 
@@ -554,7 +554,7 @@ b3...=
 
 * Ввод secrets для автодеплоя GitHub-репозитория:
 
-  * SSH_HOST: ```95.163.228.93``` (или другой IP-адрес сервера)
+  * SSH_HOST: ```95.163.223.69``` (или другой IP-адрес сервера)
 
   * SSH_USER: ```myappuser```
 
