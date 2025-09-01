@@ -274,7 +274,7 @@ apt update && apt upgrade -y && apt install -y git nginx ufw
 * Настройка firewall:
 
 ```bash
-sudo ufw allow 5432 && sudo ufw allow 5050 && sudo ufw allow 22 && ufw allow 80 && ufw enable -y
+sudo ufw allow 5432 && sudo ufw allow 5050 && sudo ufw allow 22 && ufw allow 80 && sudo ufw --force enable
 ```
 
 * Запуск Docker, добавление пользователя в группу docker и его переподключение на сервер для утверждения прав:
